@@ -28,7 +28,7 @@ The project focuses on combining clean visual design, responsive layouts, intera
 * CSS3
 * JavaScript
 * AOS (Animate On Scroll)
-* Local Storage API
+* Local Storage
 * GitHub Pages
 
 ## Team Members and Contributions
