@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Vaayanaशala</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="media-backdrop" id="mediaBackdrop"></div>
+    <div class="noise-layer"></div>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a class="brand" href="frontpage.html"><span class="brand-mark">V</span><span>Vaayanaशala</span></a>
+        <a class="btn btn-ghost" href="frontpage.html">Home</a>
+      </div>
+    </nav>
+
+    <main class="auth-wrap">
+      <section class="auth-card glass" data-reveal>
+        <div class="eyebrow">Secure scholar gateway</div>
+        <h1 class="title-lg">Enter शala.</h1>
+        <p class="muted">Use the demo credentials already filled in, or create a new local profile.</p>
+        <div class="auth-tabs">
+          <button class="active" data-auth-tab="login" onclick="switchAuth('login')">Sign in</button>
+          <button data-auth-tab="signup" onclick="switchAuth('signup')">Sign up</button>
+        </div>
+        <form class="auth-panel active" data-auth-panel="login" onsubmit="processAuth(event,'login')">
+          <input class="form-control" id="loginEmail" type="email" required value="student@astra.edu" required placeholder="Email address">
+          <input class="form-control" type="password" required value="assignmentPassed50" placeholder="Password">
+          <button class="btn btn-primary" type="submit">Initialize session</button>
+        </form>
+        <form class="auth-panel" data-auth-panel="signup" onsubmit="processAuth(event,'signup')">
+          <input class="form-control" id="signupName" type="text" required placeholder="Full scholar name">
+          <input class="form-control" id="signupEmail" type="email" required placeholder="Email address">
+          <input class="form-control" type="password" required placeholder="Password">
+          <input class="form-control" type="password" required placeholder="Confirm Password">
+          <button class="btn btn-primary" type="submit">Create profile</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

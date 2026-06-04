@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership | Vaayanaशala</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/frontpage.css">
+  <link rel="stylesheet" href="css/membership.css">
+</head>
+<body class="page-home">
+  <div class="page-shell">
+    <div class="media-backdrop" id="mediaBackdrop"></div>
+    <div class="noise-layer"></div>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a class="brand" href="frontpage.html"><span class="brand-mark">V</span><span>Vaayanaशala</span></a>
+        <button class="nav-toggle" aria-label="Open navigation">Menu</button>
+        <div class="nav-links">
+          <a class="nav-link" href="dashboard.html">Browse</a>
+          <a class="nav-link" href="favourites.html">Favourites</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link active" href="membership.html">Membership</a>
+          <span id="navAuthBlock"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section" id="memberships" style="padding-top: 120px;">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <div>
+              <div class="eyebrow">Membership plans</div>
+              <h2 class="title-lg">Choose your reading plan.</h2>
+              <p class="muted" style="margin-top: 10px;">Select a plan to proceed with the payment simulation.</p>
+            </div>
+          </div>
+          <div class="grid grid-3 plan-grid">
+            <article class="plan-card glass selectable-plan" data-plan="silver" data-reveal onclick="selectPlan('Silver', 2.99,'month', this)">
+              <div class="plan-kicker">Silver</div>
+              <h3>Essential Access</h3>
+              <p class="muted">A focused plan for casual readers who want curated books and smooth discovery.</p>
+              <div class="plan-price">$2.99<span>/month</span></div>
+              <ul>
+                <li>Browse featured books</li>
+                <li>Save favourite titles</li>
+                <li>Responsive reading interface</li>
+              </ul>
+            </article>
+            <article class="plan-card glass selectable-plan" data-plan="gold" data-reveal onclick="selectPlan('Gold', 4.99,'6 months',this)">
+              <div class="plan-kicker">Gold</div>
+              <h3>Smart Reader</h3>
+              <p class="muted">Best for regular learners who want faster search, premium collections, and saved progress.</p>
+              <div class="plan-price">$4.99<span>/6 months</span></div>
+              <ul>
+                <li>Unlimited catalog browsing</li>
+                <li>Priority featured collections</li>
+                <li>Personalised genre picks</li>
+              </ul>
+            </article>
+            <article class="plan-card glass selectable-plan" data-plan="platinum" data-reveal onclick="selectPlan('Platinum', 9.99,'year', this)">
+              <div class="plan-kicker">Platinum</div>
+              <h3>Scholar Suite</h3>
+              <p class="muted">A complete plan for project research, advanced browsing, and intensive reading goals.</p>
+              <div class="plan-price">$9.99<span>/year</span></div>
+              <ul>
+                <li>Research-ready collection views</li>
+                <li>Offline PDF downloads</li>
+                <li>Early access to new domains</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="payment-simulation" style="display:none; padding-top: 20px;">
+        <div class="container">
+          <div class="payment-card glass" data-reveal>
+            <div class="eyebrow">Checkout Simulation</div>
+            <h2 class="title-lg" id="selectedPlanTitle" style="font-size: 2.5rem; margin-bottom: 10px;">Upgrade to Plan</h2>
+            <p class="muted" id="selectedPlanPrice" style="font-size: 1.2rem;">Total: $0/mo</p>
+            <form class="payment-form" onsubmit="simulatePayment(event)">
+              <input class="form-control" type="text" required placeholder="Name on Card">
+              <input class="form-control" type="text" required placeholder="Card Number (e.g. 4111 1111 1111 1111)" pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}">
+              <div style="display: flex; gap: 10px;">
+                <input class="form-control" type="text" required placeholder="MM/YY" pattern="\d{2}/\d{2}">
+                <input class="form-control" type="text" required placeholder="CVV" pattern="\d{3,4}">
+              </div>
+              <button class="btn btn-primary" type="submit" id="payButton" style="width: 100%; margin-top: 10px;">Pay Now</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <h2>Vaayanaशala</h2>
+      <p>
+        A digital reading platform designed to make book discovery
+        immersive, modern, and accessible for every reader.
+      </p>
+    </div>
+
+    <div>
+      <h4>Navigate</h4>
+      <a href="frontpage.html">Home</a>
+      <a href="dashboard.html">Browse</a>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="membership.html">Membership</a>
+    </div>
+
+    <div>
+  <h4>Categories</h4>
+
+  <a href="dashboard.html?genre=Finance">Finance</a>
+
+  <a href="dashboard.html?genre=Self-Help">Self-Help</a>
+
+  <a href="dashboard.html?genre=Fiction">Fiction</a>
+
+  <a href="dashboard.html?genre=Mystery">Mystery</a>
+</div>
+
+  </div>
+
+  <div class="footer-bottom container">
+    <p>© 2026 Vaayanaशala — UID Project | Amrita School of Computing.</p>
+  </div>
+</footer>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/membership.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Vaayanaशala</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="media-backdrop" id="mediaBackdrop"></div>
+    <div class="noise-layer"></div>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a class="brand" href="frontpage.html"><span class="brand-mark">V</span><span>Vaayanaशala</span></a>
+        <button class="nav-toggle" aria-label="Open navigation">Menu</button>
+        <div class="nav-links">
+          <a class="nav-link active" href="dashboard.html">Browse</a>
+          <a class="nav-link" href="favourites.html">Favourites</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="membership.html">Membership</a>
+          <span id="navAuthBlock"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="dashboard-layout">
+      <aside class="sidebar glass" data-reveal>
+        <h2 class="sidebar-title">Index categories</h2>
+        <div class="genre-list" id="sidebarGenreGroup"></div>
+        <h2 class="sidebar-title" style="margin-top:28px">Minimum rating</h2>
+        <input class="range" type="range" id="ratingInput" min="1" max="5" step="0.1" value="1">
+        <p class="muted" id="ratingDisplayValue">All ratings</p>
+        <button class="btn btn-ghost" id="resetFilters" style="width:100%">Reset filters</button>
+      </aside>
+
+      <section class="main-panel">
+        <div data-reveal>
+          <div class="eyebrow">Scholar workspace</div>
+          <h1 class="title-lg">Portal dashboard</h1>
+          <p class="lead">Search, filter, sort, save, and open detailed records from the Astra catalog.</p>
+        </div>
+
+        <div class="toolbar glass" data-reveal>
+          <input class="form-control" id="catalogSearch" type="search" placeholder="Search books, authors, or genres">
+          <select class="form-control" id="catalogSort">
+            <option value="title">Sort by title</option>
+            <option value="rating">Sort by rating</option>
+          </select>
+        </div>
+
+        <div class="results-header">
+          <h2>Matching records: <span id="matchCounter">0</span></h2>
+        </div>
+        <div class="grid grid-3" id="booksGrid"></div>
+        <div class="empty-state glass" id="emptyCatalogState" style="display:none">
+          <h3>No volumes found</h3>
+          <p class="muted">Try another search term or lower the rating filter.</p>
+        </div>
+      </section>
+    </main>
+
+  <footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <h2>Vaayanaशala</h2>
+      <p>
+        A digital reading platform designed to make book discovery
+        immersive, modern, and accessible for every reader.
+      </p>
+    </div>
+
+    <div>
+      <h4>Navigate</h4>
+      <a href="frontpage.html">Home</a>
+      <a href="dashboard.html">Browse</a>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="membership.html">Membership</a>
+    </div>
+
+    <div>
+  <h4>Categories</h4>
+
+  <a href="dashboard.html?genre=Finance">Finance</a>
+
+  <a href="dashboard.html?genre=Self-Help">Self-Help</a>
+
+  <a href="dashboard.html?genre=Fiction">Fiction</a>
+
+  <a href="dashboard.html?genre=Mystery">Mystery</a>
+</div>
+
+  </div>
+
+  <div class="footer-bottom container">
+    <p>© 2026 Vaayanaशala — UID Project | Amrita School of Computing.</p>
+  </div>
+</footer>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
