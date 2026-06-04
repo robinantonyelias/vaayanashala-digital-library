@@ -37,9 +37,9 @@ The project focuses on combining clean visual design, responsive layouts, intera
 
 Designed the landing page and overall visual experience. Implemented the hero video background, featured collection section, membership preview, category ticker, glassmorphism styling, responsive hero layout, and scroll reveal animations using AOS.
 
-### ADITHYAN B – Book Catalog, Search and Filtering
+### ADITHYAN B – Dashboard Page, Book Catalog, Search and Filtering
 
-Implemented the book catalog system, search functionality, category-based filtering, navigation flow, and overall book discovery experience to help users easily explore available books.
+Designed the user dashboard and developed the book catalog system with advanced search, category-based filtering, and reset filter functionality. Implemented smooth navigation and an enhanced book discovery experience, allowing users to easily browse, search, and explore the library's collection.
 
 ### ROBIN ANTONY – Book Details, PDF Reading, About and Contact Pages
 
